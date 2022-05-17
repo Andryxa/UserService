@@ -8,17 +8,17 @@ public class UserMapper {
     private UserMapper() {
     }
 
-    public static UserDTO getUserDTO(User user) {
+    public static UserDTO toDTO(User user) {
         UserDTO userDTO = new UserDTO();
         userDTO.setUserId(user.getUserId());
-        userDTO.setLocation(LocationMapper.getLocationDTO(user.getLocation()));
+        userDTO.setLocation(LocationMapper.toDTO(user.getLocation()));
         return userDTO;
     }
 
-    public static User getUser(UserDTO userDTO) {
+    public static User toEntity(UserDTO userDTO) {
         User user = new User();
         user.setUserId(userDTO.getUserId());
-        user.setLocation(LocationMapper.getLocation(userDTO.getLocation()));
+        user.setLocation(LocationMapper.toEntity(userDTO.getLocation()));
         return user;
     }
 }

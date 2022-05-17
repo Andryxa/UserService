@@ -7,7 +7,7 @@ public class LocationMapper {
     private LocationMapper() {
     }
 
-    public static LocationDTO getLocationDTO(Location location) {
+    public static LocationDTO toDTO(Location location) {
         LocationDTO locationDTO = new LocationDTO();
         locationDTO.setLocationId(location.getLocationId());
         locationDTO.setLat(location.getLat());
@@ -15,7 +15,7 @@ public class LocationMapper {
         return locationDTO;
     }
 
-    public static Location getLocation(LocationDTO locationDTO) {
+    public static Location toEntity(LocationDTO locationDTO) {
         Location location = new Location();
         location.setLocationId(locationDTO.getLocationId());
         location.setLat(locationDTO.getLat());
