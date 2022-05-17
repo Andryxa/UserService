@@ -2,11 +2,11 @@ package com.weathe_alligator.user_service.dto;
 
 public class UserDTO {
     private Long userId;
-    private LocationDTO locationId;
+    private LocationDTO location;
 
-    public UserDTO(Long userId, LocationDTO locationId) {
+    public UserDTO(Long userId, LocationDTO location) {
         this.userId = userId;
-        this.locationId = locationId;
+        this.location = location;
     }
 
     public UserDTO() {
@@ -20,11 +20,11 @@ public class UserDTO {
         this.userId = userId;
     }
 
-    public LocationDTO getLocationId() {
-        return locationId;
+    public LocationDTO getLocation() {
+        return location;
     }
 
-    public void setLocationId(LocationDTO locationId) {
-        this.locationId = locationId;
+    public void setLocation(LocationDTO location) {
+        this.location = location;
     }
 }

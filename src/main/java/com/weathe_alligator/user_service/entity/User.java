@@ -10,11 +10,11 @@ public class User {
     private Long userId;
     @ManyToOne
     @JoinColumn(name = "location_id")
-    private Location locationId;
+    private Location location;
 
-    public User(Long userId, Location locationId) {
+    public User(Long userId, Location location) {
         this.userId = userId;
-        this.locationId = locationId;
+        this.location = location;
     }
 
     public User() {
@@ -28,11 +28,11 @@ public class User {
         this.userId = userId;
     }
 
-    public Location getLocationId() {
-        return locationId;
+    public Location getLocation() {
+        return location;
     }
 
-    public void setLocationId(Location locationId) {
-        this.locationId = locationId;
+    public void setLocation(Location location) {
+        this.location = location;
     }
 }
