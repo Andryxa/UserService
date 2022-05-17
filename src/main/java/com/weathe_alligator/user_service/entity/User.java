@@ -6,31 +6,31 @@ import javax.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int user_id;
+    private int userId;
     @ManyToOne
-    private Location location_id;
+    private Location locationId;
 
-    public User(int user_id, Location location_id) {
-        this.user_id = user_id;
-        this.location_id = location_id;
+    public User(int userId, Location locationId) {
+        this.userId = userId;
+        this.locationId = locationId;
     }
 
     public User() {
     }
 
-    public int getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public Location getLocation_id() {
-        return location_id;
+    public Location getLocationId() {
+        return locationId;
     }
 
-    public void setLocation_id(Location location_id) {
-        this.location_id = location_id;
+    public void setLocationId(Location locationId) {
+        this.locationId = locationId;
     }
 }

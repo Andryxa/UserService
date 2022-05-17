@@ -10,15 +10,15 @@ public class UserMapper {
 
     public static UserDTO getUserDTO(User user) {
         UserDTO userDTO = new UserDTO();
-        userDTO.setUser_idDTO(user.getUser_id());
-        userDTO.setLocation_idDTO(LocationMapper.getLocationDTO(user.getLocation_id()));
+        userDTO.setUserIdDTO(user.getUserId());
+        userDTO.setLocationIdDTO(LocationMapper.getLocationDTO(user.getLocationId()));
         return userDTO;
     }
 
     public static User getUser(UserDTO userDTO) {
         User user = new User();
-        user.setUser_id(userDTO.getUser_idDTO());
-        user.setLocation_id(LocationMapper.getLocation(userDTO.getLocation_idDTO()));
+        user.setUserId(userDTO.getUserIdDTO());
+        user.setLocationId(LocationMapper.getLocation(userDTO.getLocationIdDTO()));
         return user;
     }
 }

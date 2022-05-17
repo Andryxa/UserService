@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int location_id;
+    private int locationId;
     private Float lon;
     private Float lat;
 
@@ -20,12 +20,12 @@ public class Location {
     public Location() {
     }
 
-    public int getLocation_id() {
-        return location_id;
+    public int getLocationId() {
+        return locationId;
     }
 
-    public void setLocation_id(int location_id) {
-        this.location_id = location_id;
+    public void setLocationId(int locationId) {
+        this.locationId = locationId;
     }
 
     public Float getLon() {

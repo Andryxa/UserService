@@ -1,12 +1,12 @@
 package com.weathe_alligator.user_service.dto;
 
 public class LocationDTO {
-    private int location_idDTO;
+    private int locationIdDTO;
     private Float lonDTO;
     private Float latDTO;
 
-    public LocationDTO(int location_idDTO, Float lonDTO, Float latDTO) {
-        this.location_idDTO = location_idDTO;
+    public LocationDTO(int locationIdDTO, Float lonDTO, Float latDTO) {
+        this.locationIdDTO = locationIdDTO;
         this.lonDTO = lonDTO;
         this.latDTO = latDTO;
     }
@@ -14,12 +14,12 @@ public class LocationDTO {
     public LocationDTO() {
     }
 
-    public int getLocation_idDTO() {
-        return location_idDTO;
+    public int getLocationIdDTO() {
+        return locationIdDTO;
     }
 
-    public void setLocation_idDTO(int location_idDTO) {
-        this.location_idDTO = location_idDTO;
+    public void setLocationIdDTO(int locationIdDTO) {
+        this.locationIdDTO = locationIdDTO;
     }
 
     public Float getLonDTO() {
