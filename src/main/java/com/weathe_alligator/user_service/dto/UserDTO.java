@@ -1,30 +1,30 @@
 package com.weathe_alligator.user_service.dto;
 
 public class UserDTO {
-    private int userIdDTO;
-    private LocationDTO locationIdDTO;
+    private Long userId;
+    private LocationDTO locationId;
 
-    public UserDTO(int userIdDTO, LocationDTO locationIdDTO) {
-        this.userIdDTO = userIdDTO;
-        this.locationIdDTO = locationIdDTO;
+    public UserDTO(Long userId, LocationDTO locationId) {
+        this.userId = userId;
+        this.locationId = locationId;
     }
 
     public UserDTO() {
     }
 
-    public int getUserIdDTO() {
-        return userIdDTO;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setUserIdDTO(int userIdDTO) {
-        this.userIdDTO = userIdDTO;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
-    public LocationDTO getLocationIdDTO() {
-        return locationIdDTO;
+    public LocationDTO getLocationId() {
+        return locationId;
     }
 
-    public void setLocationIdDTO(LocationDTO locationIdDTO) {
-        this.locationIdDTO = locationIdDTO;
+    public void setLocationId(LocationDTO locationId) {
+        this.locationId = locationId;
     }
 }

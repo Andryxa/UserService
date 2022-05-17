@@ -1,4 +1,4 @@
 create table users(
-    userId     bigserial  not null  primary key,
-    locationId bigint references location (locationId)
+    user_id     bigserial  not null  primary key,
+    location_id bigint references location (location_id)
 );

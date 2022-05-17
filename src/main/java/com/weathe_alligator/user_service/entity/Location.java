@@ -1,14 +1,13 @@
 package com.weathe_alligator.user_service.entity;
 
-import liquibase.pro.packaged.F;
-
 import javax.persistence.*;
 
 @Entity
 public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int locationId;
+    @Column(name = "location_id")
+    private Long locationId;
     private Float lon;
     private Float lat;
 
@@ -20,11 +19,11 @@ public class Location {
     public Location() {
     }
 
-    public int getLocationId() {
+    public Long getLocationId() {
         return locationId;
     }
 
-    public void setLocationId(int locationId) {
+    public void setLocationId(Long locationId) {
         this.locationId = locationId;
     }
 

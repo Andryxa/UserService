@@ -9,17 +9,17 @@ public class LocationMapper {
 
     public static LocationDTO getLocationDTO(Location location) {
         LocationDTO locationDTO = new LocationDTO();
-        locationDTO.setLocationIdDTO(location.getLocationId());
-        locationDTO.setLatDTO(location.getLat());
-        locationDTO.setLonDTO(location.getLon());
+        locationDTO.setLocationId(location.getLocationId());
+        locationDTO.setLat(location.getLat());
+        locationDTO.setLon(location.getLon());
         return locationDTO;
     }
 
     public static Location getLocation(LocationDTO locationDTO) {
         Location location = new Location();
-        location.setLocationId(locationDTO.getLocationIdDTO());
-        location.setLat(locationDTO.getLatDTO());
-        location.setLon(locationDTO.getLonDTO());
+        location.setLocationId(locationDTO.getLocationId());
+        location.setLat(locationDTO.getLat());
+        location.setLon(locationDTO.getLon());
         return location;
     }
 }

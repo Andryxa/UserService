@@ -6,11 +6,13 @@ import javax.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int userId;
+    @Column(name = "user_id")
+    private Long userId;
     @ManyToOne
+    @JoinColumn(name = "location_id")
     private Location locationId;
 
-    public User(int userId, Location locationId) {
+    public User(Long userId, Location locationId) {
         this.userId = userId;
         this.locationId = locationId;
     }
@@ -18,11 +20,11 @@ public class User {
     public User() {
     }
 
-    public int getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
