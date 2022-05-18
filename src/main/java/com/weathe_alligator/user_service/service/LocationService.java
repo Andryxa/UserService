@@ -1,8 +1,8 @@
 package com.weathe_alligator.user_service.service;
 
-import com.weathe_alligator.user_service.entity.Location;
+import com.weathe_alligator.user_service.dto.LocationDTO;
 
 public interface LocationService {
 
-    Location locationById(Long locationId);
+    LocationDTO findById(Long locationId);
 }

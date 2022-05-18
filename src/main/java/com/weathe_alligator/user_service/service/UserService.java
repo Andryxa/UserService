@@ -1,8 +1,8 @@
 package com.weathe_alligator.user_service.service;
 
-import com.weathe_alligator.user_service.entity.User;
+import com.weathe_alligator.user_service.dto.UserDTO;
 
 public interface UserService {
 
-    User userById(Long userId);
+    UserDTO findById(Long userId);
 }
