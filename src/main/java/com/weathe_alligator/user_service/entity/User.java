@@ -1,38 +1,25 @@
 package com.weathe_alligator.user_service.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
+@Data
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
     private Long userId;
     @ManyToOne
-    @JoinColumn(name = "location_id")
-    private Location location;
+    @JoinColumn(referencedColumnName = "location_id")
+    private Location locationId;
 
-    public User(Long userId, Location location) {
+    public User(Long userId, Location locationId) {
         this.userId = userId;
-        this.location = location;
+        this.locationId = locationId;
     }
 
     public User() {
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
     }
 }
