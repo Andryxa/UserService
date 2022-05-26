@@ -14,11 +14,9 @@ public class Location {
     private Long locationId;
 
     @Column(name = "lon")
-    @Basic(fetch = FetchType.EAGER)
     private Float lon;
 
     @Column(name = "lat")
-    @Basic(fetch = FetchType.EAGER)
     private Float lat;
 
     public Location(Float lon, Float lat) {

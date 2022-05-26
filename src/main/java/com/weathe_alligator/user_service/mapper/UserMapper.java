@@ -11,14 +11,14 @@ public class UserMapper {
     public static UserDTO toDTO(User user) {
         UserDTO userDTO = new UserDTO();
         userDTO.setUserId(user.getUserId());
-        userDTO.setLocationId(LocationMapper.toDTO(user.getLocationId()));
+        userDTO.setLocation(LocationMapper.toDTO(user.getLocation()));
         return userDTO;
     }
 
     public static User toEntity(UserDTO userDTO) {
         User user = new User();
         user.setUserId(userDTO.getUserId());
-        user.setLocationId(LocationMapper.toEntity(userDTO.getLocationId()));
+        user.setLocation(LocationMapper.toEntity(userDTO.getLocation()));
         return user;
     }
 }

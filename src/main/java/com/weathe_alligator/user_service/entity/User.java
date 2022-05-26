@@ -11,13 +11,13 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
-    @ManyToOne
-    @JoinColumn(referencedColumnName = "location_id")
-    private Location locationId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "location_id")
+    private Location location;
 
-    public User(Long userId, Location locationId) {
+    public User(Long userId, Location location) {
         this.userId = userId;
-        this.locationId = locationId;
+        this.location = location;
     }
 
     public User() {

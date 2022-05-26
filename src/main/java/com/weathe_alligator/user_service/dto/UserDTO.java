@@ -7,7 +7,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class UserDTO {
     private Long userId;
-    private LocationDTO locationId;
+    private LocationDTO location;
 
     public UserDTO() {
     }
