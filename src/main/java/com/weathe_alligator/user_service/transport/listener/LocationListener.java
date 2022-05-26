@@ -22,7 +22,7 @@ public class LocationListener {
     private final LocationService locationService;
 
     @RabbitListener(queues = "locationQueue", messageConverter = "jsonConverter")
-    public void locationById(LocationRequest request) {
+    public LocationResponse locationById(LocationRequest request) {
         log.info("Received location request: {}", request);
         UserDTO user = userService.findById(request.getUserId());
         Long locationId = user.getLocationId().getLocationId();
@@ -32,6 +32,6 @@ public class LocationListener {
         locationResponse.setLon(location.getLon());
 
         log.info("Sent location response: {}", locationResponse);
-        return;
+        return locationResponse;
     }
 }
