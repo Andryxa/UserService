@@ -1,15 +1,20 @@
 package com.weathe_alligator.user_service.entity;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
 @Entity
-@Data
 @Table(name = "users")
+@Getter
+@Setter
+@ToString
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
     private Long userId;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "location_id")
